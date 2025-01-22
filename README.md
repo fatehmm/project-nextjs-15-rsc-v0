@@ -1,36 +1,23 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+This project, `project-nextjs-15-rsc-v0` is bootstrapped with `create-next-app` and uses Next.js 15.
 
-## Getting Started
+I want to build a base project that I can just git clone and start to build.
 
-First, run the development server:
+I tend to keep 3rd party external services as less as possible.
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+### My recommendations to the developers using this project:
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+1. This is a Next.js App Router project, not a Pages Router project, try to use server components whenever possible.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+### List of features in this project:
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+1. Extensive component library using Shadcn/ui and other extensions.
+2. Authentication & Authorization (WIP)
+3. Proper server and client components seperation using `server-only` and `client-only` packages
+4. Environment variable validation during build time using [T3 Env](https://env.t3.gg)
+5. Ratelimiting api functions with ip adresses using `@unkey/ratelimit`
+6. Gracious error handling with error.tsx and not-found.tsx files
+7. Proper error logging and analyzing with Sentry
 
-## Learn More
+## TODO
 
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+- [⚠️] Fix env.t3.gg problems in next.config.js
