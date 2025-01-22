@@ -1,11 +1,6 @@
 import { ImageResponse } from 'next/og';
-import { env } from '../../../../env';
 
-const geistResponse = fetch(
-    new URL('public/Geist-Regular.woff2', env.BASE_URL)
-).then((res) => res.arrayBuffer());
 export async function GET(request: Request) {
-    const geist = await geistResponse;
     try {
         const { searchParams } = new URL(request.url);
 
@@ -80,13 +75,6 @@ export async function GET(request: Request) {
             {
                 width: 1200,
                 height: 630,
-                // fonts: [
-                //     {
-                //         name: 'Geist',
-                //         data: geist,
-                //         style: 'normal',
-                //     },
-                // ],
             }
         );
     } catch (e: any) {
