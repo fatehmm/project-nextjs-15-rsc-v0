@@ -19,8 +19,7 @@ export const metadata: Metadata = {
         template: `%s - ${siteConfig.name}`,
     },
     description: siteConfig.description,
-    openGraph: {}
-    }
+    openGraph: {},
 };
 
 export default function RootLayout({
